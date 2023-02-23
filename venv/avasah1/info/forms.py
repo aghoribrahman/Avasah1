@@ -1,12 +1,6 @@
 from django import forms
 from .models import Query_model, Contact_model
 
-FRUIT_CHOICES= [
-    ('residential property', 'Residential Property'),
-    ('commercial property', 'Commercial property'),
-    ('agriculture property', 'Agriculture Property'),
-    ]
-
 
 class Query_form(forms.ModelForm):
     
