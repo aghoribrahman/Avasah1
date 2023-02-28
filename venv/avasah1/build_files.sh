@@ -1,8 +1,10 @@
 # build_files.sh
-echo " BUILD START"
-python3.9 -m pip install -r requirements.txt
-python3.9 manage.py collectstatic --noinput --clear
-python3.9 manage.py makemigrations --noinput --clear
-python3.9 manage.py migrate --noinput --clear
-echo " BUILD ENDS"
+echo "Building the Project..."
+python3.9 -m pip install -r requiremnts.txt
 
+echo "Make Migration..."
+python3.9 manage.py makemigrations --noinput
+python3.9 manage.py migrate --noinput
+
+echo "Collecting Static..."
+python3.9 manage.py collectstatic --noinput --clear
